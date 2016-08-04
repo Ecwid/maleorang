@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.9.9"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.3"
+    }
+}
+
+apply from: 'wrapper.gradle'
+apply from: 'compile.gradle'
+apply from: 'test.gradle'
+apply from: 'publish.gradle'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:1.0.3"
+    compile "org.jetbrains.kotlin:kotlin-reflect:1.0.3"
+    compile "com.google.guava:guava:19.0"
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'org.apache.httpcomponents:httpclient:4.5.2'
+    compile 'joda-time:joda-time:2.9.4'
+
+    testCompile 'org.testng:testng:6.8.21'
+}

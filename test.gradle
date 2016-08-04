@@ -1,0 +1,19 @@
+test {
+    useTestNG();
+
+    outputs.upToDateWhen {
+        false
+    }
+
+    exclude '**/examples/**'
+
+    testLogging {
+        events = ["STARTED", "PASSED", "FAILED", "SKIPPED"]
+    }
+
+    doFirst {
+        ['mailchimp.test.apikey', 'mailchimp.test.listid'].each { prop ->
+            systemProperty prop, project.getProperty(prop)
+        }
+    }
+}

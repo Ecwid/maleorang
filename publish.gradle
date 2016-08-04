@@ -1,0 +1,72 @@
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+group = 'com.ecwid'
+archivesBaseName = "maleorang"
+version = '3.0-0.9.2'
+
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from dokka
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives jar, javadocJar, sourcesJar
+}
+
+signing {
+    required { project.gradle.getTaskGraph().hasTask(uploadArchives) }
+    sign configurations.archives
+}
+
+if (project.hasProperty('sonatypeUsername') && project.hasProperty('sonatypePassword')) {
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+                repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                    authentication(userName: sonatypeUsername, password: sonatypePassword)
+                }
+
+                snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+                    authentication(userName: sonatypeUsername, password: sonatypePassword)
+                }
+
+                pom.project {
+                    name 'MailChimp API wrapper for Java'
+                    description 'MailChimp API Wrapper for Java'
+                    packaging 'jar'
+
+                    url 'https://github.com/Ecwid/maleorang'
+
+                    scm {
+                        connection 'scm:git:git@github.com:Ecwid/maleorang.git'
+                        developerConnection 'scm:git:git@github.com:Ecwid/maleorang.git'
+                        url 'https://github.com/Ecwid/maleorang.git'
+                    }
+
+                    licenses {
+                        license {
+                            name 'The Apache License, Version 2.0'
+                            url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id 'basil'
+                            name 'Vasily Karyaev'
+                            email 'v.karyaev@gmail.com'
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

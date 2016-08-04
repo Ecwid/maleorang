@@ -1,0 +1,8 @@
+wrapper {
+    gradleVersion '2.14.1'
+    distributionUrl = "http://services.gradle.org/distributions/gradle-${gradleVersion}-all.zip"
+
+    if (gradle.gradleVersion != gradleVersion) {
+        logger.error("Gradle version $gradleVersion is required, but version $gradle.gradleVersion is used")
+    }
+}
