@@ -8,20 +8,20 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 /**
- * Created by basil on 09.08.16.
+ * Demonstrates how to use an existing method implementation (namely {@link com.ecwid.maleorang.method.v3_0.members.EditMemberMethod.CreateOrUpdate}).
  */
-public class MembersMethodsExample {
+public class ExistingMethodExample {
 
     private final String apiKey, listId;
 
     @Parameters({"mailchimp.test.apikey", "mailchimp.test.listid"})
-    private MembersMethodsExample(String apiKey, String listId) {
+    private ExistingMethodExample(String apiKey, String listId) {
         this.apiKey = apiKey;
         this.listId = listId;
     }
 
     /**
-     * This example shows how to subsribe a user.
+     * Subscribes a user to list.
      */
     @Test
     public void run() throws Exception {
