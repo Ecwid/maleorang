@@ -2,7 +2,6 @@ package com.ecwid.maleorang.method.v3_0.lists
 
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.Field
-import com.sun.corba.se.pept.transport.ContactInfo
 import java.util.*
 
 /**
