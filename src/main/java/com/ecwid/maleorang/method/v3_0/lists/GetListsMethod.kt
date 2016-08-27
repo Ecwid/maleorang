@@ -10,7 +10,7 @@ import java.util.*
  * [Get information about members in a list](http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/#read-get_lists_list_id_members)
  */
 @Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = "/lists")
-class GetListsMethod() : MailchimpMethod<GetListsMethod.Response>() {
+class GetListsMethod : MailchimpMethod<GetListsMethod.Response>() {
 
     @JvmField
     @QueryStringParam
@@ -29,7 +29,7 @@ class GetListsMethod() : MailchimpMethod<GetListsMethod.Response>() {
     var offset: Int? = null
 
     @JvmField
-    @Field
+    @QueryStringParam
     var email: String? = null
 
     @JvmField
