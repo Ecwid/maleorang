@@ -5,8 +5,7 @@ import com.ecwid.maleorang.MailchimpMethod
 import com.ecwid.maleorang.annotation.*
 
 /**
- * [Get information about a specific list]
- * (http://developer.mailchimp.com/documentation/mailchimp/reference/lists/#read-get_lists_list_id)
+ * [Get information about a specific list](http://developer.mailchimp.com/documentation/mailchimp/reference/lists/#read-get_lists_list_id)
  */
 @Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = "/lists/{list_id}")
 class GetListMethod(

@@ -11,12 +11,15 @@ class CampaignDefaultsInfo : MailchimpObject() {
     @JvmField
     @Field
     var from_name: String? = null
+
     @JvmField
     @Field
     var from_email: String? = null
+
     @JvmField
     @Field
     var subject: String? = null
+
     @JvmField
     @Field
     var language: String? = null
