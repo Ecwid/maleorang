@@ -8,6 +8,7 @@ MaleOrang is written in [Kotlin language](https://kotlinlang.org/) and can be us
 Currently MaleOrang has wrappers for a limited number of MailChimp API methods, namely:
 * [Members methods](http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/)
 * [Batch Operations methods](http://developer.mailchimp.com/documentation/mailchimp/reference/batches/)
+* Some of [Lists methods](http://developer.mailchimp.com/documentation/mailchimp/reference/lists/)
 
 However, it is easy to extend the API and add support for any method you need (see the samples below).
 
