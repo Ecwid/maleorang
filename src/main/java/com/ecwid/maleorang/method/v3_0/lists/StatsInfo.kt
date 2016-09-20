@@ -47,15 +47,15 @@ class StatsInfo : MailchimpObject() {
 
     @JvmField
     @Field
-    var avg_sub_rate: Int? = null
+    var avg_sub_rate: Double? = null
 
     @JvmField
     @Field
-    var avg_unsub_rate: Int? = null
+    var avg_unsub_rate: Double? = null
 
     @JvmField
     @Field
-    var target_sub_rate: Int? = null
+    var target_sub_rate: Double? = null
 
     @JvmField
     @Field
@@ -63,7 +63,7 @@ class StatsInfo : MailchimpObject() {
 
     @JvmField
     @Field
-    var click_rate: Int? = null
+    var click_rate: Double? = null
 
     @JvmField
     @Field
