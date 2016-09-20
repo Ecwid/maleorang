@@ -59,7 +59,7 @@ class StatsInfo : MailchimpObject() {
 
     @JvmField
     @Field
-    var open_rate: Int? = null
+    var open_rate: Double? = null
 
     @JvmField
     @Field
