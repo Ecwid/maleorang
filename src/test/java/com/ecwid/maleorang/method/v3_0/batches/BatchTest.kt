@@ -2,9 +2,9 @@ package com.ecwid.maleorang.method.v3_0.batches
 
 import com.ecwid.maleorang.MailchimpClient
 import com.ecwid.maleorang.MailchimpException
-import com.ecwid.maleorang.method.v3_0.members.DeleteBatchMethod
-import com.ecwid.maleorang.method.v3_0.members.DeleteMemberMethod
-import com.ecwid.maleorang.method.v3_0.members.EditMemberMethod
+import com.ecwid.maleorang.method.v3_0.lists.members.DeleteBatchMethod
+import com.ecwid.maleorang.method.v3_0.lists.members.DeleteMemberMethod
+import com.ecwid.maleorang.method.v3_0.lists.members.EditMemberMethod
 import org.testng.Assert.*
 import org.testng.annotations.Parameters
 import org.testng.annotations.Test

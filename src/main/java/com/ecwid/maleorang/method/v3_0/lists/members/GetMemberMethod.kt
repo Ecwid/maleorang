@@ -1,4 +1,4 @@
-package com.ecwid.maleorang.method.v3_0.members
+package com.ecwid.maleorang.method.v3_0.lists.members
 
 
 import com.ecwid.maleorang.MailchimpMethod

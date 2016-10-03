@@ -1,7 +1,7 @@
-package com.ecwid.maleorang.method.v3_0.members
+package com.ecwid.maleorang.method.v3_0.lists.members
 
-import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.MailchimpMethod
+import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.APIVersion
 import com.ecwid.maleorang.annotation.HttpMethod
 import com.ecwid.maleorang.annotation.Method
