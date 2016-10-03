@@ -1,21 +1,13 @@
-package com.ecwid.maleorang.method.v3_0.members
+package com.ecwid.maleorang.method.v3_0.lists.members
 
 import com.ecwid.maleorang.MailchimpClient
 import com.ecwid.maleorang.MailchimpException
-import com.ecwid.maleorang.MailchimpMethod
 import com.ecwid.maleorang.MailchimpObject
-import com.ecwid.maleorang.method.v3_0.batches.BatchStatus
-import com.ecwid.maleorang.method.v3_0.batches.GetBatchStatusMethod
-import com.ecwid.maleorang.method.v3_0.batches.GetBatchesStatusMethod
-import com.ecwid.maleorang.method.v3_0.batches.StartBatchMethod
-import org.testng.Assert
-import org.testng.Assert.*
+import org.testng.Assert.assertEquals
+import org.testng.Assert.fail
 import org.testng.annotations.BeforeMethod
 import org.testng.annotations.Parameters
 import org.testng.annotations.Test
-
-import java.util.concurrent.TimeUnit
-
 import java.util.*
 
 class MembersTest

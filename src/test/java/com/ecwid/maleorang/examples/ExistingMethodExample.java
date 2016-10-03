@@ -2,13 +2,13 @@ package com.ecwid.maleorang.examples;
 
 import com.ecwid.maleorang.MailchimpClient;
 import com.ecwid.maleorang.MailchimpObject;
-import com.ecwid.maleorang.method.v3_0.members.EditMemberMethod;
-import com.ecwid.maleorang.method.v3_0.members.MemberInfo;
+import com.ecwid.maleorang.method.v3_0.lists.members.EditMemberMethod;
+import com.ecwid.maleorang.method.v3_0.lists.members.MemberInfo;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 /**
- * Demonstrates how to use an existing method implementation (namely {@link com.ecwid.maleorang.method.v3_0.members.EditMemberMethod.CreateOrUpdate}).
+ * Demonstrates how to use an existing method implementation (namely {@link com.ecwid.maleorang.method.v3_0.lists.members.EditMemberMethod.CreateOrUpdate}).
  */
 public class ExistingMethodExample {
 

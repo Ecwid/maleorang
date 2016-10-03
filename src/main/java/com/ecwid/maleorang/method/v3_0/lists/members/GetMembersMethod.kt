@@ -1,12 +1,10 @@
-package com.ecwid.maleorang.method.v3_0.members
+package com.ecwid.maleorang.method.v3_0.lists.members
 
 
-import com.ecwid.maleorang.annotation.Field
 import com.ecwid.maleorang.MailchimpMethod
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.*
-
-import java.util.Date
+import java.util.*
 
 /**
  * [Get information about members in a list](http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/#read-get_lists_list_id_members)

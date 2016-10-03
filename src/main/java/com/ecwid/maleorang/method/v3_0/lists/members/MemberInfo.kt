@@ -1,10 +1,8 @@
-package com.ecwid.maleorang.method.v3_0.members
+package com.ecwid.maleorang.method.v3_0.lists.members
 
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.Field
-import org.apache.commons.codec.digest.DigestUtils
-
-import java.util.Date
+import java.util.*
 
 class MemberInfo : MailchimpObject() {
     @JvmField
