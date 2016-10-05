@@ -27,4 +27,29 @@ class LinkInfo : MailchimpObject() {
     @JvmField
     @Field
     var schema: String? = null
+
+    fun setRel(rel: String): LinkInfo{
+        this.rel = rel
+        return this
+    }
+
+    fun setHref(href: String): LinkInfo{
+        this.href = href
+        return this
+    }
+
+    fun setMethod(method: String): LinkInfo{
+        this.method = method
+        return this
+    }
+
+    fun setTargetSchema(targetSchema: String): LinkInfo{
+        this.targetSchema = targetSchema
+        return this
+    }
+
+    fun setSchema(schema: String): LinkInfo{
+        this.schema = schema
+        return this
+    }
 }

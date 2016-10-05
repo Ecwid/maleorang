@@ -27,4 +27,5 @@ dependencies {
     compile 'joda-time:joda-time:2.9.4'
 
     testCompile 'org.testng:testng:6.8.21'
+    testCompile 'org.powermock:powermock-mockito-release-full:1.5.4'
 }

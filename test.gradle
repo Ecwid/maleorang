@@ -12,7 +12,7 @@ test {
     }
 
     doFirst {
-        ['mailchimp.test.apikey', 'mailchimp.test.listid'].each { prop ->
+        ['mailchimp.test.apikey', 'mailchimp.test.listid', 'mailchimp.test.abusereportid'].each { prop ->
             systemProperty prop, project.getProperty(prop)
         }
     }
