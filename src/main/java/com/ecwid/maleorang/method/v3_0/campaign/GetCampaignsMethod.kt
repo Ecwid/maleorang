@@ -1,4 +1,4 @@
-package com.ecwid.maleorang.method.v3_0.lists.members
+package com.ecwid.maleorang.method.v3_0.campaign
 
 
 import com.ecwid.maleorang.MailchimpMethod
@@ -6,15 +6,8 @@ import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.*
 import java.util.*
 
-/**
- * [Get information about members in a list](http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/#read-get_lists_list_id_members)
- */
-@Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = "/lists/{list_id}/members")
-class GetMembersMethod(
-        @JvmField
-        @PathParam
-        val list_id: String
-) : MailchimpMethod<GetMembersMethod.Response>() {
+@Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = "/campaigns")
+class GetCampaignsMethod : MailchimpMethod<GetCampaignsMethod.Response>() {
 
     @JvmField
     @QueryStringParam
@@ -34,7 +27,7 @@ class GetMembersMethod(
 
     @JvmField
     @QueryStringParam
-    var email_type: String? = null
+    var type: String? = null
 
     @JvmField
     @QueryStringParam
@@ -42,24 +35,32 @@ class GetMembersMethod(
 
     @JvmField
     @QueryStringParam
-    var since_timestamp_opt: Date? = null
+    var before_send_time: String? = null
 
     @JvmField
     @QueryStringParam
-    var before_timestamp_opt: Date? = null
+    var since_send_opt: String? = null
 
     @JvmField
     @QueryStringParam
-    var since_last_changed: Date? = null
+    var before_create_time: String? = null
 
     @JvmField
     @QueryStringParam
-    var before_last_changed: Date? = null
+    var since_create_time: String? = null
+
+    @JvmField
+    @QueryStringParam
+    var list_id: String? = null
+
+    @JvmField
+    @QueryStringParam
+    var folder_id: String? = null
 
     class Response : MailchimpObject() {
         @JvmField
         @Field
-        var members: List<MemberInfo>? = null
+        var campaings: List<CampaignInfo>? = null
 
         @JvmField
         @Field
