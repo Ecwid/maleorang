@@ -4,6 +4,10 @@ import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.Field
 import java.util.*
 
+/**
+ * Created by: Manuel Lara <lararojas.mr@gmail.com>
+ */
+
 class CampaignInfo : MailchimpObject() {
     @JvmField
     @Field

@@ -6,8 +6,9 @@ import com.ecwid.maleorang.annotation.*
 import org.apache.commons.codec.digest.DigestUtils
 
 /**
- * [Get information about a specific list member](http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/#read-get_lists_list_id_members_subscriber_hash)
+ * Created by: Manuel Lara <lararojas.mr@gmail.com>
  */
+
 @Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = "/campaigns/{campaign_id}")
 class GetCampaignMethod(
         @JvmField

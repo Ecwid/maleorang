@@ -6,6 +6,10 @@ import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.*
 import java.util.*
 
+/**
+ * Created by: Manuel Lara <lararojas.mr@gmail.com>
+ */
+
 @Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = "/reports")
 class GetCampaignsReportsMethod : MailchimpMethod<GetCampaignsReportsMethod.Response>() {
 

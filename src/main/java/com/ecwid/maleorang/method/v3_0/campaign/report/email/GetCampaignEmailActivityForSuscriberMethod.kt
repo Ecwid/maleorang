@@ -5,13 +5,17 @@ import com.ecwid.maleorang.MailchimpMethod
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.*
 import java.util.*
+import org.apache.commons.codec.digest.DigestUtils
+
+/**
+ * Created by: Manuel Lara <lararojas.mr@gmail.com>
+ */
 
 @Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = " /reports/{campaign_id}/email-activity/{subscriber_hash}")
 class GetCampaignEmailActivityForSuscriberMethod(
         @JvmField
         @PathParam
-        val campaign_id: String
-		
+        val campaign_id: String,
         email: String
 ) : MailchimpMethod<GetCampaignEmailActivityForSuscriberMethod.Response>() {
     

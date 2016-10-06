@@ -4,6 +4,10 @@ import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.Field
 import java.util.*
 
+/**
+ * Created by: Manuel Lara <lararojas.mr@gmail.com>
+ */
+
 class CampaignReportInfo : MailchimpObject() {
     @JvmField
     @Field
@@ -28,10 +32,6 @@ class CampaignReportInfo : MailchimpObject() {
     @JvmField
     @Field
     var subject_line: String? = null
-		
-    @JvmField
-    @Field
-    var emails_sent: Int? = null
 		
     @JvmField
     @Field
