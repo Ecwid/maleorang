@@ -39,6 +39,6 @@ class CampaignInfo : MailchimpObject() {
 		
     @JvmField
     @Field
-    var recipients: MailchimpObject? = null
+    var recipients: RecipientsCampaignInfo? = null
 	
 }

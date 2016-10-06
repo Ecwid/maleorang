@@ -9,7 +9,7 @@ import org.apache.commons.codec.digest.DigestUtils
  * [Get information about a specific list member](http://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/#read-get_lists_list_id_members_subscriber_hash)
  */
 @Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = "/campaigns/{campaign_id}")
-class GetMemberMethod(
+class GetCampaignMethod(
         @JvmField
         @PathParam
         val campaign_id: String

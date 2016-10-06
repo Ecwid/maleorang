@@ -1,0 +1,24 @@
+package com.ecwid.maleorang.method.v3_0.campaign.report
+
+import com.ecwid.maleorang.MailchimpObject
+import com.ecwid.maleorang.annotation.Field
+import java.util.*
+
+class CampaignListStatsReport : MailchimpObject() {
+    @JvmField
+    @Field
+    var sub_rate: Double? = null
+
+    @JvmField
+    @Field
+    var unsub_rate: Double? = null
+	
+    @JvmField
+    @Field
+    var open_rate: Double? = null	
+	
+    @JvmField
+    @Field
+    var click_rate: Double? = null
+	
+}
