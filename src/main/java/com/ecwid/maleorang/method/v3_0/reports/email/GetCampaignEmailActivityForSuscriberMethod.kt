@@ -1,21 +1,27 @@
-package com.ecwid.maleorang.method.v3_0.campaign.report
+package com.ecwid.maleorang.method.v3_0.reports.email
 
 
 import com.ecwid.maleorang.MailchimpMethod
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.*
 import java.util.*
+import org.apache.commons.codec.digest.DigestUtils
 
 /**
  * Created by: Manuel Lara <lararojas.mr@gmail.com>
  */
 
-@Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = " /reports/{campaign_id}")
-class GetCampaignReportMethod(
+@Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = " /reports/{campaign_id}/email-activity/{subscriber_hash}")
+class GetCampaignEmailActivityForSuscriberMethod(
         @JvmField
         @PathParam
-        val campaign_id: String
-) : MailchimpMethod<GetCampaignReportMethod.Response>() {
+        val campaign_id: String,
+        email: String
+) : MailchimpMethod<GetCampaignEmailActivityForSuscriberMethod.Response>() {
+    
+	@JvmField
+    @PathParam
+    val subscriber_hash: String = DigestUtils.md5Hex(email.toLowerCase())
 
     @JvmField
     @QueryStringParam
@@ -33,23 +39,16 @@ class GetCampaignReportMethod(
     @QueryStringParam
     var offset: Int? = null
 
-    @JvmField
-    @QueryStringParam
-    var type: String? = null
-
-    @JvmField
-    @QueryStringParam
-    var before_send_time: String? = null
-
-    @JvmField
-    @QueryStringParam
-    var since_send_time: String? = null
 
     class Response : MailchimpObject() {
         @JvmField
         @Field
-        var reports: List<CampaignReportInfo>? = null
+        var emails: CampaignEmailActivityInfo? = null
 
+	@JvmField
+        @Field
+        var campaign_id: String? = null
+		
         @JvmField
         @Field
         var total_items: Int? = null

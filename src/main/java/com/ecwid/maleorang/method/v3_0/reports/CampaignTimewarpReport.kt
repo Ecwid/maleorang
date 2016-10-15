@@ -1,4 +1,4 @@
-package com.ecwid.maleorang.method.v3_0.campaign.report
+package com.ecwid.maleorang.method.v3_0.reports
 
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.Field
@@ -19,7 +19,7 @@ class CampaignTimewarpReport : MailchimpObject() {
 	
     @JvmField
     @Field
-    var last_open: Date? = null	
+    var last_open: Date? = null
 	
     @JvmField
     @Field

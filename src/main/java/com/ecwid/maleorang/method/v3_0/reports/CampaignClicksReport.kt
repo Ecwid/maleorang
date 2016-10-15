@@ -1,4 +1,4 @@
-package com.ecwid.maleorang.method.v3_0.campaign.report.email
+package com.ecwid.maleorang.method.v3_0.reports
 
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.Field
@@ -8,25 +8,25 @@ import java.util.*
  * Created by: Manuel Lara <lararojas.mr@gmail.com>
  */
 
-class EmailReportActivityDetails : MailchimpObject() {
+class CampaignClicksReport : MailchimpObject() {
     @JvmField
     @Field
-    var action: String? = null
+    var clicks_total: Int? = null
 
     @JvmField
     @Field
-    var type: String? = null
+    var unique_clicks: Int? = null
 	
     @JvmField
     @Field
-    var timestamp: String? = null	
+    var unique_subscriber_clicks: Int? = null	
 	
     @JvmField
     @Field
-    var url: String? = null
+    var click_rate: Double? = null
 		
     @JvmField
     @Field
-    var ip: String? = null
+    var last_click: Date? = null
 	
 }

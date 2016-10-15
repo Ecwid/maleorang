@@ -1,4 +1,4 @@
-package com.ecwid.maleorang.method.v3_0.campaign.report.email
+package com.ecwid.maleorang.method.v3_0.reports.email
 
 
 import com.ecwid.maleorang.MailchimpMethod

@@ -1,4 +1,4 @@
-package com.ecwid.maleorang.method.v3_0.campaign.report.email
+package com.ecwid.maleorang.method.v3_0.reports.email
 
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.Field
@@ -16,11 +16,7 @@ class CampaignEmailActivityInfo : MailchimpObject() {
     @JvmField
     @Field
     var list_id: String? = null
-	
-    @JvmField
-    @Field
-    var type: String? = null	
-	
+
     @JvmField
     @Field
     var email_id: String? = null

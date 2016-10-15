@@ -1,4 +1,4 @@
-package com.ecwid.maleorang.method.v3_0.campaign.report
+package com.ecwid.maleorang.method.v3_0.reports
 
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.Field
@@ -8,21 +8,21 @@ import java.util.*
  * Created by: Manuel Lara <lararojas.mr@gmail.com>
  */
 
-class CampaignListStatsReport : MailchimpObject() {
+class CampaignTimeseriesReport : MailchimpObject() {
     @JvmField
     @Field
-    var sub_rate: Double? = null
+    var timestamp: Date? = null
 
     @JvmField
     @Field
-    var unsub_rate: Double? = null
+    var emails_sent: Int? = null
 	
     @JvmField
     @Field
-    var open_rate: Double? = null	
-	
+    var unique_opens: Int? = null
+		
     @JvmField
     @Field
-    var click_rate: Double? = null
+    var recipients_clicks: Int? = null
 	
 }

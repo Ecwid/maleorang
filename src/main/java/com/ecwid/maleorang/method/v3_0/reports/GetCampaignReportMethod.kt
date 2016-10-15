@@ -1,4 +1,4 @@
-package com.ecwid.maleorang.method.v3_0.campaign.report
+package com.ecwid.maleorang.method.v3_0.reports
 
 
 import com.ecwid.maleorang.MailchimpMethod
@@ -10,8 +10,12 @@ import java.util.*
  * Created by: Manuel Lara <lararojas.mr@gmail.com>
  */
 
-@Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = "/reports")
-class GetCampaignsReportsMethod : MailchimpMethod<GetCampaignsReportsMethod.Response>() {
+@Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = " /reports/{campaign_id}")
+class GetCampaignReportMethod(
+        @JvmField
+        @PathParam
+        val campaign_id: String
+) : MailchimpMethod<GetCampaignReportMethod.Response>() {
 
     @JvmField
     @QueryStringParam
@@ -41,11 +45,10 @@ class GetCampaignsReportsMethod : MailchimpMethod<GetCampaignsReportsMethod.Resp
     @QueryStringParam
     var since_send_time: String? = null
 
-
     class Response : MailchimpObject() {
         @JvmField
         @Field
-        var reports: List<CampaignReportInfo>? = null
+        var report: CampaignReportInfo? = null
 
         @JvmField
         @Field
