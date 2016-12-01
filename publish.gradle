@@ -64,6 +64,11 @@ if (project.hasProperty('sonatypeUsername') && project.hasProperty('sonatypePass
                             name 'Vasily Karyaev'
                             email 'v.karyaev@gmail.com'
                         }
+                        developer {
+                            id 'aqman'
+                            name 'Grigory Osin'
+                            email 'aqman@gmail.com'
+                        }
                     }
                 }
             }
