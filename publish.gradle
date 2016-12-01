@@ -65,9 +65,9 @@ if (project.hasProperty('sonatypeUsername') && project.hasProperty('sonatypePass
                             email 'v.karyaev@gmail.com'
                         }
                         developer {
-                            id 'aqman'
+                            id 'aqman1'
                             name 'Grigory Osin'
-                            email 'aqman@gmail.com'
+                            email 'aqman@ecwid.com'
                         }
                     }
                 }
