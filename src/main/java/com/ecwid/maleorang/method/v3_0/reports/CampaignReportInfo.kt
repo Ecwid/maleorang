@@ -91,7 +91,7 @@ class CampaignReportInfo : MailchimpObject() {
 			
     @JvmField
     @Field
-    var timeseries: CampaignTimeseriesReport? = null
+    var timeseries: List<CampaignTimeseriesReport>? = null
 	
     @JvmField
     @Field

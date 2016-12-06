@@ -2,7 +2,6 @@ package com.ecwid.maleorang.method.v3_0.reports.email
 
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.Field
-import java.util.*
 
 /**
  * Created by: Manuel Lara <lararojas.mr@gmail.com>
@@ -27,6 +26,5 @@ class CampaignEmailActivityInfo : MailchimpObject() {
 		
     @JvmField
     @Field
-    var activity: EmailReportActivityDetails? = null
-	
+    var activity: List<EmailReportActivityDetails>? = null
 }
