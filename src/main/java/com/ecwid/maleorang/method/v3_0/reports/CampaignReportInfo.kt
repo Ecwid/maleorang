@@ -47,7 +47,7 @@ class CampaignReportInfo : MailchimpObject() {
 
     @JvmField
     @Field
-    var send_time: String? = null
+    var send_time: Date? = null
 	
     @JvmField
     @Field

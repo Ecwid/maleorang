@@ -19,7 +19,7 @@ class CampaignInfo : MailchimpObject() {
 	
     @JvmField
     @Field
-    var create_time: String? = null
+    var create_time: Date? = null
 		
     @JvmField
     @Field
@@ -44,5 +44,11 @@ class CampaignInfo : MailchimpObject() {
     @JvmField
     @Field
     var recipients: RecipientsCampaignInfo? = null
+
+    @JvmField
+    @Field
+    var settings: CampaignSettingsInfo? = null
+
+
 	
 }

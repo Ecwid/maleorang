@@ -35,11 +35,11 @@ class GetCampaignsReportsMethod : MailchimpMethod<GetCampaignsReportsMethod.Resp
 
     @JvmField
     @QueryStringParam
-    var before_send_time: String? = null
+    var before_send_time: Date? = null
 
     @JvmField
     @QueryStringParam
-    var since_send_time: String? = null
+    var since_send_time: Date? = null
 
 
     class Response : MailchimpObject() {

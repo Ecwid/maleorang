@@ -4,6 +4,7 @@ package com.ecwid.maleorang.method.v3_0.campaign
 import com.ecwid.maleorang.MailchimpMethod
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.*
+import java.util.*
 
 /**
  * Created by: Manuel Lara <lararojas.mr@gmail.com>
@@ -38,7 +39,7 @@ class GetCampaignsMethod : MailchimpMethod<GetCampaignsMethod.Response>() {
 
     @JvmField
     @QueryStringParam
-    var before_send_time: String? = null
+    var before_send_time: Date? = null
 
     @JvmField
     @QueryStringParam
@@ -46,11 +47,11 @@ class GetCampaignsMethod : MailchimpMethod<GetCampaignsMethod.Response>() {
 
     @JvmField
     @QueryStringParam
-    var before_create_time: String? = null
+    var before_create_time: Date? = null
 
     @JvmField
     @QueryStringParam
-    var since_create_time: String? = null
+    var since_create_time: Date? = null
 
     @JvmField
     @QueryStringParam
