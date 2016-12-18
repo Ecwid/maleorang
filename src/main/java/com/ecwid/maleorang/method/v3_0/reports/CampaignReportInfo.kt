@@ -83,7 +83,7 @@ class CampaignReportInfo : MailchimpObject() {
 	
     @JvmField
     @Field
-    var ab_split: MailchimpObject? = null
+    var ab_split: MailchimpObject? = null //TODO create abSplit Object
 				
     @JvmField
     @Field

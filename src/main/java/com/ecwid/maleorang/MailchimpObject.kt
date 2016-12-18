@@ -1,5 +1,6 @@
 package com.ecwid.maleorang
 
+import com.ecwid.maleorang.annotation.Field
 import com.google.gson.JsonParseException
 
 
@@ -18,6 +19,10 @@ open class MailchimpObject {
      */
     @JvmField
     val mapping: MutableMap<String, Any?> = MailchimpObjectMapping(this)
+
+    @JvmField
+    @Field
+    var _links: String? = null
 
     /**
      * Serializes this object to JSON.
