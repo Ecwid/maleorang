@@ -2,7 +2,7 @@ package com.ecwid.maleorang.method.v3_0.campaign
 
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.Field
-import com.ecwid.maleorang.method.v3_0.reports.email.TypeCampign
+import com.ecwid.maleorang.method.v3_0.reports.email.TypeCampaign
 import java.util.*
 
 /**
@@ -16,7 +16,7 @@ class CampaignInfo : MailchimpObject() {
 	
     @JvmField
     @Field
-    var type: TypeCampign? = null
+    var type: TypeCampaign? = null
 	
     @JvmField
     @Field

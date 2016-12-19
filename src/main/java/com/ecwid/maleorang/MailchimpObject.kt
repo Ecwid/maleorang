@@ -22,7 +22,7 @@ open class MailchimpObject {
 
     @JvmField
     @Field
-    var _links: String? = null
+    var _links: List<String>? = null
 
     /**
      * Serializes this object to JSON.
