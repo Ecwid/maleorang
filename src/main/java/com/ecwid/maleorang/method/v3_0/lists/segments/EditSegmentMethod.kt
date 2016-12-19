@@ -1,9 +1,8 @@
-package com.ecwid.maleorang.method.v3_0.lists.members
+package com.ecwid.maleorang.method.v3_0.segments
 
 import com.ecwid.maleorang.MailchimpMethod
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.*
-import com.ecwid.maleorang.method.v3_0.lists.SegmentInfo
 
 /**
  * Created by: Manuel Lara <lararojas.mr@gmail.com>

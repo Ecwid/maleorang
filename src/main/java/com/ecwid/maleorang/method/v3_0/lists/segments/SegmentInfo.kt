@@ -1,8 +1,7 @@
-package com.ecwid.maleorang.method.v3_0.lists
+package com.ecwid.maleorang.method.v3_0.segments
 
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.Field
-import com.ecwid.maleorang.method.v3_0.reports.email.TypeSegment
 import java.util.*
 
 /**

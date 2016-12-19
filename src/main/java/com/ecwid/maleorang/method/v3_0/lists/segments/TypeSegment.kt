@@ -1,4 +1,4 @@
-package com.ecwid.maleorang.method.v3_0.reports.email
+package com.ecwid.maleorang.method.v3_0.segments
 
 /**
  * Created by: Manuel Lara <lararojas.mr@gmail.com>
