@@ -1,4 +1,4 @@
-package com.ecwid.maleorang.method.v3_0.segments
+package com.ecwid.maleorang.method.v3_0.list.segments
 
 import com.ecwid.maleorang.MailchimpMethod
 import com.ecwid.maleorang.MailchimpObject
