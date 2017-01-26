@@ -2,10 +2,8 @@ package com.ecwid.maleorang.method.v3_0.campaigns
 
 import com.ecwid.maleorang.MailchimpMethod
 import com.ecwid.maleorang.MailchimpObject
-import com.ecwid.maleorang.annotation.APIVersion
-import com.ecwid.maleorang.annotation.HttpMethod
-import com.ecwid.maleorang.annotation.Method
-import com.ecwid.maleorang.annotation.PathParam
+import com.ecwid.maleorang.annotation.*
+import java.util.*
 
 /**
  * Base class for campaign action operations.
@@ -40,7 +38,20 @@ sealed class CampaignActionMethod<R : MailchimpObject> : MailchimpMethod<R>() {
      * [Schedule a campaign for delivery](https://developer.mailchimp.com/documentation/mailchimp/reference/campaigns/#action-post_campaigns_campaign_id_actions_schedule)
      */
     @Method(httpMethod = HttpMethod.POST, version = APIVersion.v3_0, path = "/campaigns/{campaign_id}/actions/schedule")
-    class Schedule(@JvmField @PathParam val campaign_id: String) : CampaignActionMethod<MailchimpObject>()
+    class Schedule(@JvmField @PathParam val campaign_id: String) : CampaignActionMethod<MailchimpObject>() {
+
+        /**
+         * The date and time in UTC to schedule the campaign for delivery. Campaigns may only be scheduled to send on the quarter-hour (:00, :15, :30, :45).
+         */
+        @JvmField
+        @Field
+        var schedule_time: Date? = null
+
+        @JvmField
+        @Field
+        var timewarp: Boolean? = null
+
+    }
 
     /**
      * [Send a MailChimp campaign](https://developer.mailchimp.com/documentation/mailchimp/reference/campaigns/#action-post_campaigns_campaign_id_actions_send)
