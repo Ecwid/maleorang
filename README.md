@@ -15,7 +15,7 @@ However, it is easy to extend the API and add support for any method you need (s
 ### Code samples
 
 * [Using an existing method implementation (Java)](src/test/java/com/ecwid/maleorang/examples/ExistingMethodExample.java)
-* [Using an existing method implementation (Kotlin)](src/test/java/com/ecwid/maleorang/method/v3_0/members/MembersTest.kt)
+* [Using an existing method implementation (Kotlin)](src/test/java/com/ecwid/maleorang/method/v3_0/lists/members/MembersTest.kt)
 * [Using a custom method implementation (Java)](src/test/java/com/ecwid/maleorang/examples/CustomMethodExample.java)
 
 ### Build tools integration
