@@ -1,4 +1,4 @@
-package com.ecwid.maleorang.method.v3_0.list.segments
+package com.ecwid.maleorang.method.v3_0.lists.segments
 
 
 import com.ecwid.maleorang.MailchimpMethod
@@ -38,7 +38,7 @@ class GetSegmentsMethod(
 
     @JvmField
     @QueryStringParam
-    var since_create_at: Date? = null
+    var since_created_at: Date? = null
 
     @JvmField
     @QueryStringParam

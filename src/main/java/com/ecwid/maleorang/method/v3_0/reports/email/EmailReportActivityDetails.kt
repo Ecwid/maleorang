@@ -11,11 +11,11 @@ import java.util.*
 class EmailReportActivityDetails : MailchimpObject() {
     @JvmField
     @Field
-    var action: String? = null
+    var action: TypeEmailActivity? = null
 
     @JvmField
     @Field
-    var type: TypeEmailActivity? = null
+    var type: TypeBounceActivity? = null
 	
     @JvmField
     @Field
@@ -28,5 +28,14 @@ class EmailReportActivityDetails : MailchimpObject() {
     @JvmField
     @Field
     var ip: String? = null
-	
+
+
+    fun setAction(action: String) {
+        this.action = TypeEmailActivity.valueOf(action)
+    }
+
+    fun setType(type: String) {
+        this.type = TypeBounceActivity.valueOf(type)
+    }
+
 }

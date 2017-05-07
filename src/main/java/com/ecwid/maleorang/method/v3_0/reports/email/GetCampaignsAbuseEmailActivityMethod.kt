@@ -4,18 +4,17 @@ package com.ecwid.maleorang.method.v3_0.reports.email
 import com.ecwid.maleorang.MailchimpMethod
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.*
-import java.util.*
 
 /**
  * Created by: Manuel Lara <lararojas.mr@gmail.com>
  */
 
-@Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = "/reports/{campaign_id}/email-activity")
-class GetCampaignsEmailActivityMethod(
+@Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = "/reports/{campaign_id}/abuse-reports")
+class GetCampaignsAbuseEmailActivityMethod(
         @JvmField
         @PathParam
         val campaign_id: String
-) : MailchimpMethod<GetCampaignsEmailActivityMethod.Response>() {
+) : MailchimpMethod<GetCampaignsAbuseEmailActivityMethod.Response>() {
 
     @JvmField
     @QueryStringParam
@@ -25,21 +24,12 @@ class GetCampaignsEmailActivityMethod(
     @QueryStringParam
     var exclude_fields: String? = null
 
-    @JvmField
-    @QueryStringParam
-    var count: Int? = 0
-
-    @JvmField
-    @QueryStringParam
-    var offset: Int? = null
-
-
     class Response : MailchimpObject() {
         @JvmField
         @Field
-        var emails: List<CampaignEmailActivityInfo>? = null
+        var abuse_report: List<CampaignEmailAbuseInfo>? = null
 
-	@JvmField
+	    @JvmField
         @Field
         var campaign_id: String? = null
 		

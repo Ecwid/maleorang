@@ -1,4 +1,4 @@
-package com.ecwid.maleorang.method.v3_0.list.segments
+package com.ecwid.maleorang.method.v3_0.lists.segments
 
 /**
  * Created by: Manuel Lara <lararojas.mr@gmail.com>

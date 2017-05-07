@@ -1,14 +1,10 @@
 package com.ecwid.maleorang
 
 import com.ecwid.maleorang.annotation.*
-import com.ecwid.maleorang.annotation.Method
-import com.ecwid.maleorang.util.DateUtil.formatDate
 import com.ecwid.maleorang.util.ClassUtil.getAnnotatedFields
-
+import com.ecwid.maleorang.util.DateUtil.formatDate
 import java.net.URLEncoder
-import java.util.Collections
-import java.util.Date
-import java.util.TreeMap
+import java.util.*
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
@@ -34,7 +30,8 @@ internal class MailchimpMethodInfo(private val method: MailchimpMethod<*>) {
 
     val requestBody: String? = when (httpMethod) {
         HttpMethod.POST, HttpMethod.PATCH, HttpMethod.PUT -> method.toJson()
-        else -> null.apply { require(method.mapping.isEmpty(), { "$httpMethod method is not supposed to have request body: $method" }) }
+        else -> null.apply { require(method.mapping.isEmpty(), { "$httpMethod method is not supposed to have request " +
+                "body: $method mapping: "+ method.mapping }) }
     }
 
     fun buildUrl(apiKey: String): String {

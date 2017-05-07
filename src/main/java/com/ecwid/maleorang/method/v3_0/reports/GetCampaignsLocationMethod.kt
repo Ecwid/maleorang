@@ -1,21 +1,20 @@
-package com.ecwid.maleorang.method.v3_0.reports.email
+package com.ecwid.maleorang.method.v3_0.reports
 
 
 import com.ecwid.maleorang.MailchimpMethod
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.*
-import java.util.*
 
 /**
  * Created by: Manuel Lara <lararojas.mr@gmail.com>
  */
 
-@Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = "/reports/{campaign_id}/email-activity")
-class GetCampaignsEmailActivityMethod(
+@Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = "/reports/{campaign_id}/locations")
+class GetCampaignLocationMethod(
         @JvmField
         @PathParam
         val campaign_id: String
-) : MailchimpMethod<GetCampaignsEmailActivityMethod.Response>() {
+) : MailchimpMethod<GetCampaignLocationMethod.Response>() {
 
     @JvmField
     @QueryStringParam
@@ -27,7 +26,7 @@ class GetCampaignsEmailActivityMethod(
 
     @JvmField
     @QueryStringParam
-    var count: Int? = 0
+    var count: Int? = null
 
     @JvmField
     @QueryStringParam
@@ -37,12 +36,12 @@ class GetCampaignsEmailActivityMethod(
     class Response : MailchimpObject() {
         @JvmField
         @Field
-        var emails: List<CampaignEmailActivityInfo>? = null
+        var locations: List<CampaignLocationInfo>? = null
 
-	@JvmField
+        @JvmField
         @Field
         var campaign_id: String? = null
-		
+
         @JvmField
         @Field
         var total_items: Int? = null

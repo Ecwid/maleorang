@@ -1,4 +1,5 @@
 buildscript {
+    ext.kotlin_version = '1.1.2-2'
     repositories {
         mavenCentral()
         jcenter()
@@ -6,10 +7,12 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.9.9"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.3"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
 apply from: 'wrapper.gradle'
+apply plugin: 'kotlin'
 apply from: 'compile.gradle'
 apply from: 'test.gradle'
 apply from: 'publish.gradle'
@@ -27,4 +30,5 @@ dependencies {
     compile 'joda-time:joda-time:2.9.4'
 
     testCompile 'org.testng:testng:6.8.21'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
 }

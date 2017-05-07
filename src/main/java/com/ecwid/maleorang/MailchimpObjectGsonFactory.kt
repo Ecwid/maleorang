@@ -4,9 +4,8 @@ import com.ecwid.maleorang.util.DateUtil.formatDate
 import com.ecwid.maleorang.util.DateUtil.parseDate
 import com.google.gson.*
 import com.google.gson.reflect.TypeToken
-
 import java.lang.reflect.Type
-import java.util.Date
+import java.util.*
 
 /**
  * Factory creating [Gson] objects to be used for MailChimp API calls wrapping.
