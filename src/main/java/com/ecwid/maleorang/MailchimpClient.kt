@@ -66,8 +66,9 @@ open class MailchimpClient protected constructor (
                     description = error.get("detail").asString
                 } catch (e: Exception){}
             }
+            throw MailchimpException(code, response.responseBody.toString())
+            //throw MailchimpException(code, description)
 
-            throw MailchimpException(code, description)
         }
 
         return MailchimpObject.fromJson(response.responseBody ?: "{}", method.resultType)
