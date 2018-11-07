@@ -35,24 +35,24 @@ open class MailchimpClient protected constructor (
         val methodInfo = MailchimpMethodInfo(method)
         val request = Connector.Request(methodInfo.httpMethod.name, methodInfo.buildUrl(apiKey), "ignorable", apiKey, methodInfo.requestBody)
 
-        if (log.isLoggable(Level.INFO)) {
+        if (log.isLoggable(Level.FINEST)) {
             val sb = StringBuilder("Request: ")
             sb.append(request.method).append(' ').append(request.url)
             if (request.requestBody != null) {
                 sb.append('\n').append("Body: ").append(request.requestBody)
             }
-            log.info(sb.toString())
+            log.finest(sb.toString())
         }
 
         val response = connector.call(request)
 
-        if (log.isLoggable(Level.INFO)) {
+        if (log.isLoggable(Level.FINEST)) {
             val sb = StringBuilder("Response: ")
             sb.append(response.statusCode).append(' ').append(response.reasonPhrase)
             if (response.responseBody != null) {
                 sb.append('\n').append("Body: ").append(response.responseBody)
             }
-            log.info(sb.toString())
+            log.finest(sb.toString())
         }
 
         if (response.statusCode !in 200..299) {
