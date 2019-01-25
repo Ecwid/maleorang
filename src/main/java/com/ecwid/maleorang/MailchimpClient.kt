@@ -31,7 +31,7 @@ open class MailchimpClient protected constructor (
      * @return execution result
      */
     @Throws(IOException::class, MailchimpException::class)
-    fun <R : MailchimpObject> execute(method: MailchimpMethod<R>): R {
+    open fun <R : MailchimpObject> execute(method: MailchimpMethod<R>): R {
         val methodInfo = MailchimpMethodInfo(method)
         val request = Connector.Request(methodInfo.httpMethod.name, methodInfo.buildUrl(apiKey), "ignorable", apiKey, methodInfo.requestBody)
 
