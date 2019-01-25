@@ -3,12 +3,11 @@ package com.ecwid.maleorang.method.v3_0.lists.merge_fields
 import com.ecwid.maleorang.MailchimpMethod
 import com.ecwid.maleorang.MailchimpObject
 import com.ecwid.maleorang.annotation.*
-import com.ecwid.maleorang.method.v3_0.lists.members.MemberInfo
 
 /**
  * Base class for editing merge fields (formerly merge vars) for a specific list
  */
-sealed class EditMergeFieldMethod : MailchimpMethod<MemberInfo>() {
+sealed class EditMergeFieldMethod : MailchimpMethod<MergeFieldInfo>() {
 
     /**
      * [Add a new merge field for a specific list](https://developer.mailchimp.com/documentation/mailchimp/reference/lists/merge-fields/#create-post_lists_list_id_merge_fields)
