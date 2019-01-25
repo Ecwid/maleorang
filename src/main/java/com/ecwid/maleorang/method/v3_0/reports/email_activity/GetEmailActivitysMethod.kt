@@ -26,6 +26,10 @@ class GetEmailActivitysMethod(@JvmField @PathParam val campaign_id: String) : Ma
     @QueryStringParam
     var offset: Int? = null
 
+    @JvmField
+    @QueryStringParam
+    var since: String? = null
+
     class Response : MailchimpObject() {
         @JvmField
         @Field
