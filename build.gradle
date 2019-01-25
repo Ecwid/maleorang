@@ -5,8 +5,12 @@ buildscript {
     }
     dependencies {
         classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.9.9"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.3"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.51"
     }
+}
+
+plugins{
+    id 'org.jetbrains.kotlin.jvm' version '1.2.51'
 }
 
 apply from: 'wrapper.gradle'
@@ -18,9 +22,14 @@ repositories {
     mavenCentral()
 }
 
+sourceSets {
+    main.kotlin.srcDirs += 'src/main/kotlin'
+    main.java.srcDirs += 'src/main/java'
+}
+
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:1.0.3"
-    compile "org.jetbrains.kotlin:kotlin-reflect:1.0.3"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:1.2.51"
+    compile "org.jetbrains.kotlin:kotlin-reflect:1.2.51"
     compile "com.google.guava:guava:19.0"
     compile 'com.google.code.gson:gson:2.7'
     compile 'org.apache.httpcomponents:httpclient:4.5.2'
