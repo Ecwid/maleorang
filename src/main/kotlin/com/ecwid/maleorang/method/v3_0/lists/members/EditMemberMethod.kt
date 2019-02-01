@@ -51,7 +51,7 @@ sealed class EditMemberMethod : MailchimpMethod<MemberInfo>() {
 
             @JvmField
             @Field
-            val email_address: String
+            var email_address: String
     ) : EditMemberMethod() {
         @JvmField
         @PathParam
