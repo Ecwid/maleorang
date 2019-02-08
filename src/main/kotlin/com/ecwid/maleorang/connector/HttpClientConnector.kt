@@ -63,7 +63,7 @@ open class HttpClientConnector(builder: HttpClientBuilder) : Connector {
         private val UTF8 = Charsets.UTF_8
 
         private val DEFAULT_HTTPCLIENT_BUILDER = HttpClientBuilder.create()
-                .setDefaultRequestConfig(RequestConfig.custom().setConnectTimeout(15000).setSocketTimeout(15000).setConnectionRequestTimeout(15000).build())
+                .setDefaultRequestConfig(RequestConfig.custom().setConnectTimeout(15000).setSocketTimeout(300000).setConnectionRequestTimeout(15000).build())
                 .setConnectionManager(PoolingHttpClientConnectionManager().apply {
                     defaultMaxPerRoute = 10
                     maxTotal = 10
