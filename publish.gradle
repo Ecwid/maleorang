@@ -3,7 +3,7 @@ apply plugin: 'signing'
 
 group = 'com.ecwid'
 archivesBaseName = "maleorang"
-version = '3.0-0.9.6.h-raisin'
+version = '3.0-0.9.6.j-raisin'
 
 task javadocJar(type: Jar) {
     classifier = 'javadoc'
@@ -45,7 +45,6 @@ uploadArchives {
         }
     }
 }
-
 /*
 signing {
     required { project.gradle.getTaskGraph().hasTask(uploadArchives) }
