@@ -13,15 +13,16 @@ import java.util.logging.Logger
  *
  * @constructor Thread safety of the created instances depends on the supplied [connector].
  */
-open class MailchimpClient (private val apiKey: String, val connector: Connector, val socketTimeOut : Int, val connectTimeOut: Int, val connectionRequestTimeOut: Int) : Closeable {
+open class MailchimpClient protected constructor (
+        private val apiKey: String, private val connector: Connector
+) : Closeable {
     private val log = Logger.getLogger(javaClass.getName())
 
     /**
      * Instances created via this constructor are thread safe since they share a thread safe pool of http connections.
      * However in terms of performance it doesn't matter whether you reuse the same instance for the whole application or re-create it on every operation.
      */
-    @JvmOverloads
-    constructor(apiKey: String, socketTimeOut: Int = 300000, connectTimeOut: Int = 15000, connectionRequestTimeOut: Int = 15000) : this(apiKey, HttpClientConnector(socketTimeOut,connectTimeOut,connectionRequestTimeOut), socketTimeOut,connectTimeOut,connectionRequestTimeOut)
+    constructor(apiKey: String) : this(apiKey, HttpClientConnector())
 
     /**
      * Execute a MailChimp API method.

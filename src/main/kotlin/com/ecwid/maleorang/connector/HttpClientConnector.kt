@@ -16,13 +16,13 @@ import java.nio.charset.Charset
 /**
  * Implementation of [Connector] which uses Apache HttpClient library to access MailChimp API service point.
  */
-open class HttpClientConnector(builder: HttpClientBuilder, val socketTimeOut: Int, val connectTimeOut: Int, val connectionRequestTimeOut: Int) : Connector {
+open class HttpClientConnector(builder: HttpClientBuilder) : Connector {
     private val client = builder.build()
 
     /**
      * Creates instances sharing the same [PoolingHttpClientConnectionManager](http://static.javadoc.io/org.apache.httpcomponents/httpclient/4.5.2/org/apache/http/impl/conn/PoolingClientConnectionManager.html).
      */
-    constructor(socketTimeOut: Int = 300000, connectTimeOut: Int = 15000, connectionRequestTimeOut: Int = 15000) : this(DEFAULT_HTTPCLIENT_BUILDER(socketTimeOut, connectTimeOut, connectionRequestTimeOut), socketTimeOut, connectTimeOut, connectionRequestTimeOut)
+    constructor() : this(DEFAULT_HTTPCLIENT_BUILDER)
 
     @Throws(IOException::class)
     override fun call(request: Connector.Request): Connector.Response {
@@ -62,15 +62,12 @@ open class HttpClientConnector(builder: HttpClientBuilder, val socketTimeOut: In
     private companion object {
         private val UTF8 = Charsets.UTF_8
 
-        fun DEFAULT_HTTPCLIENT_BUILDER(socketTimeOut: Int, connectTimeOut: Int, connectionRequestTimeOut: Int) : HttpClientBuilder {
-            return HttpClientBuilder.create()
-                    .setDefaultRequestConfig(RequestConfig.custom().setConnectTimeout(connectTimeOut).setSocketTimeout(socketTimeOut).setConnectionRequestTimeout(connectionRequestTimeOut).build())
-                    .setConnectionManager(PoolingHttpClientConnectionManager().apply {
-                        defaultMaxPerRoute = 10
-                        maxTotal = 10
-                    })
-                    .setConnectionManagerShared(true)
-        }
-
+        private val DEFAULT_HTTPCLIENT_BUILDER = HttpClientBuilder.create()
+                .setDefaultRequestConfig(RequestConfig.custom().setConnectTimeout(15000).setSocketTimeout(300000).setConnectionRequestTimeout(15000).build())
+                .setConnectionManager(PoolingHttpClientConnectionManager().apply {
+                    defaultMaxPerRoute = 10
+                    maxTotal = 10
+                })
+                .setConnectionManagerShared(true)
     }
 }
