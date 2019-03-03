@@ -107,7 +107,36 @@ class CampaignInfo : MailchimpObject() {
 
             @JvmField
             @Field
-            var conditions: Array<String>? = null
+            var conditions: Array<ConditionInfo>? = null
+
+            open class ConditionInfo : MailchimpObject() {
+
+                @JvmField
+                @Field
+                var condition_type: String? = null
+
+            }
+
+            class TextMergeConditionInfo : ConditionInfo() {
+
+                @JvmField
+                @Field
+                var field: String? = null
+
+                @JvmField
+                @Field
+                var op: String? = null
+
+                @JvmField
+                @Field
+                var value: String? = null
+
+                init {
+                    condition_type = "TextMerge"
+                }
+
+            }
+
         }
     }
 
