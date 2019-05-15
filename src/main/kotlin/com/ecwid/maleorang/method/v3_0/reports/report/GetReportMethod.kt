@@ -14,7 +14,7 @@ import java.util.Date;
  *
  * @author Raisin-Alejandro-Palacios
  *
- * An implementation of https://developer.mailchimp.com/documentation/mailchimp/reference/reports/#read-get_reports
+ * An implementation of https://developer.mailchimp.com/documentation/mailchimp/reference/reports/
  *
  */
 @Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = "/reports")

@@ -13,7 +13,7 @@ import com.ecwid.maleorang.annotation.Field
  *
  * @author Raisin-Alejandro-Palacios
  *
- * An implementation of https://developer.mailchimp.com/documentation/mailchimp/reference/reports/sent-to/#read-get_reports_campaign_id_sent_to
+ * An implementation of https://developer.mailchimp.com/documentation/mailchimp/reference/reports/sent-to/
  *
  */
 @Method(httpMethod = HttpMethod.GET, version = APIVersion.v3_0, path = "/reports/{campaign_id}/sent-to")

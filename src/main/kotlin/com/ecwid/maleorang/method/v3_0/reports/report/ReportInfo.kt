@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * @author Raisin-Alejandro-Palacios
  *
- * A DTO class to capture response information from https://developer.mailchimp.com/documentation/mailchimp/reference/reports/#read-get_reports
+ * A DTO class to capture response information from https://developer.mailchimp.com/documentation/mailchimp/reference/reports/
  *
  */
 class ReportInfo : MailchimpObject() {
