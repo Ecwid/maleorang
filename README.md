@@ -32,7 +32,7 @@ Changes
 * Added a Query String since paramater to GetEmailActivitysMethod.
 * Enabled the overriding of the MailchimpClient method to facilitate mocking.
 * Increased the connect and connectRequest timeOuts to 15 seconds, and the socketTimeOut to 5 minutes.
-* Upgraded gradle wrapper to version 5.1.1
+* Upgraded gradle wrapper to version 5.0
 * Upgraded java version to 1.8
 * Upgraded kotlin-stdlib and reflect libraries to 1.2.51
 

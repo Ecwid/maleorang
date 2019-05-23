@@ -19,6 +19,11 @@ artifacts {
     archives jar, javadocJar, sourcesJar
 }
 
+signing {
+    required { project.gradle.getTaskGraph().hasTask(uploadArchives) }
+    sign configurations.archives
+}
+
 if (project.hasProperty('sonatypeUsername') && project.hasProperty('sonatypePassword')) {
     uploadArchives {
         repositories {
