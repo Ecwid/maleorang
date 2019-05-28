@@ -29,16 +29,16 @@ Features
 
 Changes
 * Modified EditMemberMethod to allow emailAddress to be changed on a Member list.
-* Added a Query String since paramater to GetEmailActivitysMethod.
+* Added a Query String since parameter to GetEmailActivitysMethod.
 * Enabled the overriding of the MailchimpClient method to facilitate mocking.
 * Increased the connect and connectRequest timeOuts to 15 seconds, and the socketTimeOut to 5 minutes.
-* Upgraded gradle wrapper to version 5.0
-* Upgraded java version to 1.8
-* Upgraded kotlin-stdlib and reflect libraries to 1.2.51
+* Upgraded gradle wrapper to version 5.0 .
+* Upgraded java version to 1.8 .
+* Upgraded kotlin-stdlib and reflect libraries to 1.2.51 .
 
 Bug fixes
 * Corrected EditMergeFieldMethod response object to be MergeFieldInfo and not MemberInfo.
 
 ### Build tools integration
 
-MaleOrang is accessible from [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.raisin%22%20AND%20a%3A%22maleorang%22) so it can be easily integrated with your favorite build tools like Gradle or Maven.
+MaleOrang is accessible from [Maven Central](https://mvnrepository.com/artifact/com.raisin/maleorang) so it can be easily integrated with your favorite build tools like Gradle or Maven.
