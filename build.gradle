@@ -11,6 +11,7 @@ buildscript {
 
 plugins{
     id 'org.jetbrains.kotlin.jvm' version '1.2.51'
+    id 'java'
 }
 
 apply from: 'wrapper.gradle'
