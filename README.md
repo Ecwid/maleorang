@@ -39,7 +39,7 @@ Changes
 Bug fixes
 * Corrected EditMergeFieldMethod response object to be MergeFieldInfo and not MemberInfo.
 
-### New features, changes, and bug fixes on version 3.0-0.9.8-M1
+### New features, changes, and bug fixes on version 3.0-0.9.8
 
 Changes
 * Enhanced the MailchimpClient API to allow the optional parameterization of timeOut parameters (connectTimeOut, socketTimeOut, and connectionRequestTimeOut). 
