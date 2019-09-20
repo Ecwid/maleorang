@@ -28,7 +28,7 @@ constructor(private val apiKey: String, private val listId: String) {
         }
     }
 
-    @Test
+    @Test (enabled = false)
     fun test_POST_PATCH() {
         MailchimpClient(apiKey).use { client ->
             val email = "vasya.pupkin@gmail.com"
@@ -87,7 +87,7 @@ constructor(private val apiKey: String, private val listId: String) {
         }
     }
 
-    @Test
+    @Test (enabled = false)
     fun test_PUT() {
         MailchimpClient(apiKey).use { client ->
             val email = "vasya.pupkin@gmail.com"

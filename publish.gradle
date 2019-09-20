@@ -1,9 +1,9 @@
 apply plugin: 'maven'
 apply plugin: 'signing'
 
-group = 'com.ecwid'
+group = 'com.raisin'
 archivesBaseName = "maleorang"
-version = '3.0-0.9.6'
+version = '3.0-0.9.8'
 
 task javadocJar(type: Jar) {
     classifier = 'javadoc'
@@ -43,12 +43,12 @@ if (project.hasProperty('sonatypeUsername') && project.hasProperty('sonatypePass
                     description 'MailChimp API Wrapper for Java'
                     packaging 'jar'
 
-                    url 'https://github.com/Ecwid/maleorang'
+                    url 'https://github.com/raisin-gmbh/maleorang'
 
                     scm {
-                        connection 'scm:git:git@github.com:Ecwid/maleorang.git'
-                        developerConnection 'scm:git:git@github.com:Ecwid/maleorang.git'
-                        url 'https://github.com/Ecwid/maleorang.git'
+                        connection 'scm:git:git@github.com:raisin-gmbh/maleorang.git'
+                        developerConnection 'scm:git:git@github.com:raisin-gmbh/maleorang.git'
+                        url 'https://github.com/raisin-gmbh/maleorang.git'
                     }
 
                     licenses {
@@ -60,14 +60,9 @@ if (project.hasProperty('sonatypeUsername') && project.hasProperty('sonatypePass
 
                     developers {
                         developer {
-                            id 'basil'
-                            name 'Vasily Karyaev'
-                            email 'v.karyaev@gmail.com'
-                        }
-                        developer {
-                            id 'aqman1'
-                            name 'Grigory Osin'
-                            email 'aqman@ecwid.com'
+                            id 'apalacios'
+                            name 'Alejandro Palacios'
+                            email 'alejandro.palacios@raisin.com'
                         }
                     }
                 }
