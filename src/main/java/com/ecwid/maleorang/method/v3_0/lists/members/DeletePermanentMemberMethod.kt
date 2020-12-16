@@ -9,10 +9,10 @@ import com.ecwid.maleorang.annotation.PathParam
 import org.apache.commons.codec.digest.DigestUtils
 
 /**
- * [Archive a list member](https://mailchimp.com/developer/api/marketing/list-members/archive-list-member/)
+ * [Permanently delete a list member](https://mailchimp.com/developer/api/marketing/list-members/delete-list-member/)
  */
-@Method(httpMethod = HttpMethod.DELETE, version = APIVersion.v3_0, path = "/lists/{list_id}/members/{subscriber_hash}")
-class DeleteMemberMethod(
+@Method(httpMethod = HttpMethod.POST, version = APIVersion.v3_0, path = "/lists/{list_id}/members/{subscriber_hash}/actions/delete-permanent")
+class DeletePermanentMemberMethod(
         @JvmField
         @PathParam
         val list_id: String,
